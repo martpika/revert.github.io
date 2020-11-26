@@ -281,7 +281,7 @@ svg {
   bottom: 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   svg {
     position: absolute;
     bottom: 170px;
@@ -496,7 +496,7 @@ svg {
   }
   .tree {
     width: 200px;
-    height: 200px;
+    height: 240px;
     position: absolute;
     bottom: 200px;
     left: -10px;
@@ -570,11 +570,11 @@ svg {
   }
   .penguin {
     position: absolute;
-    top: 580px;
+    bottom: 150px;
     left: 200px;
     width: var(--penguin-size, 200px);
     height: var(--penguin-size, 200px);
-    z-index: 5;
+    z-index: 1;
   }
   .right-cheek {
     top: 15%;
@@ -725,9 +725,6 @@ svg {
     width: 16%;
     height: 10%;
     border-radius: 50%;
-  }
-  .penguin {
-    position: relative;
   }
   .penguin * {
     position: absolute;
