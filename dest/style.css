@@ -68,6 +68,8 @@ body {
   position: fixed;
   top: -10%;
   z-index: 9999;
+  -webkit-transition: ease;
+  transition: ease;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -830,7 +832,7 @@ svg {
     left: 31%;
     z-index: 4;
   }
-  div.mailbox div.mail-cover {
+  div.mailbox a.mail-cover {
     width: 35%;
     height: 20%;
     background-color: #fff;
@@ -841,16 +843,10 @@ svg {
     z-index: 6;
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 1s 2s ease;
+    transition: all 1s 2s ease;
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
-  }
-  div.mailbox div.mail-cover:hover {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
   }
   #knob {
     width: 7px;
@@ -903,6 +899,135 @@ svg {
   div.mailbox * {
     position: absolute;
   }
+  /* Start of mail letter */
+  .wrapper {
+    position: absolute;
+    left: 300px;
+    top: 555px;
+    z-index: 9;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .mail {
+    width: 6vw;
+    height: 4vw;
+    background-color: #dd8282;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .mail::before {
+    content: "";
+    border-left: var(--mail-border-lr) solid #ca4d4d;
+    border-right: var(--mail-border-lr) solid transparent;
+    border-top: var(--mail-border-tb) solid transparent;
+    border-bottom: var(--mail-border-tb) solid transparent;
+    z-index: 4;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .mail::after {
+    content: "";
+    border-left: var(--mail-border-lr) solid transparent;
+    border-right: var(--mail-border-lr) solid #cf6e6e;
+    border-top: var(--mail-border-tb) solid transparent;
+    border-bottom: var(--mail-border-tb) solid #cf6e6e;
+    z-index: 5;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  div.mail a.cover {
+    border-left: var(--mail-border-lr) solid transparent;
+    border-right: var(--mail-border-lr) solid transparent;
+    border-top: var(--mail-border-tb) solid var(--mail-cover-color);
+    border-bottom: var(--mail-border-tb) solid transparent;
+    z-index: 6;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .letter {
+    width: 5vw;
+    height: 3vw;
+    background-color: white;
+    left: 5px;
+    border-radius: 10px;
+    z-index: 3;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  div.wrapper *, *::before, *::after {
+    position: absolute;
+  }
+  div.mail-container.first a.mail-cover {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  div.mail-container.first div.wrapper {
+    -webkit-transition: all 3s 1s ease;
+    transition: all 3s 1s ease;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    top: 100px;
+    left: 30px;
+  }
+  div.mail-container.first div.mail {
+    width: 86vw;
+    height: 36vw;
+    -webkit-transition: all 3s 1s ease;
+    transition: all 3s 1s ease;
+  }
+  div.mail-container.first div.mail::before {
+    border-left: var(--mail-border-final-lr) solid #ca4d4d;
+    border-right: var(--mail-border-final-lr) solid transparent;
+    border-top: var(--mail-border-final-tb) solid transparent;
+    border-bottom: var(--mail-border-final-tb) solid transparent;
+    -webkit-transition: all 3s 1s ease;
+    transition: all 3s 1s ease;
+  }
+  div.mail-container.first div.mail::after {
+    border-left: var(--mail-border-final-lr) solid transparent;
+    border-right: var(--mail-border-final-lr) solid #cf6e6e;
+    border-top: var(--mail-border-final-tb) solid transparent;
+    border-bottom: var(--mail-border-final-tb) solid #cf6e6e;
+    -webkit-transition: all 3s 1s ease;
+    transition: all 3s 1s ease;
+  }
+  div.mail-container.first div.mail a.cover {
+    border-left: var(--mail-border-final-lr) solid transparent;
+    border-right: var(--mail-border-final-lr) solid transparent;
+    border-top: var(--mail-border-final-tb) solid #b13737;
+    border-bottom: var(--mail-border-final-tb) solid transparent;
+    -webkit-transition: all 3s 1s ease;
+    transition: all 3s 1s ease;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  div.mail-container.first div.letter {
+    width: 82vw;
+    height: 30vw;
+    top: 10px;
+    left: 5px;
+    -webkit-transition: all 3s 1s ease;
+    transition: all 3s 1s ease;
+  }
+  div.mail-container.first.last div.mail a.cover {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  div.mail-container.first.last div.mail div.letter {
+    -webkit-transition: all 2s 1s ease;
+    transition: all 2s 1s ease;
+    top: -100px;
+  }
 }
 
 :root {
@@ -911,5 +1036,10 @@ svg {
   --penguin-skin: rgb(0, 0, 0);
   --penguin-belly: white;
   --penguin-beak: orange;
+  --mail-border-lr: 3vw;
+  --mail-border-tb: 2vw;
+  --mail-cover-color: rgb(221, 130, 130);
+  --mail-border-final-lr: 43vw;
+  --mail-border-final-tb: 18vw;
 }
 /*# sourceMappingURL=style.css.map */

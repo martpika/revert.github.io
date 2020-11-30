@@ -45,6 +45,7 @@ body {
     position: fixed;
     top: -10%;
     z-index: 9999;
+    transition: ease;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -728,7 +729,7 @@ div.mailbox div.mail-outside {
   z-index: 4;
 }
 
-div.mailbox div.mail-cover {
+div.mailbox a.mail-cover {
   width: 35%;
   height: 20%;
   background-color: #fff;
@@ -738,13 +739,8 @@ div.mailbox div.mail-cover {
   bottom: 30%;
   z-index: 6;
   transform-origin: bottom;
-  transition: all 1s ease;
+  transition: all 1s 2s ease;
   transform: rotateX(0deg);
-}
-
-div.mailbox div.mail-cover:hover {
-  transform: rotateX(180deg);
-  transition: all 1s ease;
 }
 
 #knob {
@@ -800,4 +796,133 @@ div.mailbox * {
 }
 
 // ######### End of Mailbox #############
+
+/* Start of mail letter */
+
+.wrapper {
+  position: absolute;
+  left: 300px;
+  top: 555px;
+  z-index: 9;
+  transform: rotateX(90deg);
+  transition: all 2s ease;
+}
+
+.mail {
+  width: 6vw;
+  height: 4vw;
+  background-color: rgb(221, 130, 130);
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+}
+
+.mail::before {
+  content: "";
+  border-left: var(--mail-border-lr) solid #ca4d4d;
+  border-right: var(--mail-border-lr) solid transparent;
+  border-top: var(--mail-border-tb) solid transparent;
+  border-bottom: var(--mail-border-tb) solid transparent;
+  z-index: 4;
+  transition: all 2s ease;
+}
+
+.mail::after {
+  content: "";
+  border-left: var(--mail-border-lr) solid transparent;
+  border-right: var(--mail-border-lr) solid #cf6e6e;
+  border-top: var(--mail-border-tb) solid transparent;
+  border-bottom: var(--mail-border-tb) solid #cf6e6e;
+  z-index: 5;
+  transition: all 2s ease;
+}
+
+div.mail a.cover {
+  border-left: var(--mail-border-lr) solid transparent;
+  border-right: var(--mail-border-lr) solid transparent;
+  border-top: var(--mail-border-tb) solid var(--mail-cover-color);
+  border-bottom: var(--mail-border-tb) solid transparent;
+  z-index: 6;
+  transition: all 2s ease;
+}
+
+.letter {
+  width: 5vw;
+  height: 3vw;
+  background-color: white;
+  left: 5px;
+  border-radius: 10px;
+  z-index: 3;
+  transition: all 2s ease;
+}
+
+div.wrapper *, *::before, *::after {
+  position: absolute;
+}
+// ########## End of mail letter ################
+
+// ######### Start of Mailbox First Phase responsive ###########
+div.mail-container.first a.mail-cover{
+  transition: all 1s ease;
+  transform: rotateX(180deg);
+}
+
+div.mail-container.first div.wrapper {
+  transition: all 3s 1s ease;
+  transform: rotateX(0deg);
+  top: 100px;
+  left: 30px;
+}
+
+div.mail-container.first div.mail {
+  width: 86vw;
+  height: 36vw;
+  transition: all 3s 1s ease;
+}
+div.mail-container.first div.mail::before {
+  border-left: var(--mail-border-final-lr) solid #ca4d4d;
+  border-right: var(--mail-border-final-lr) solid transparent;
+  border-top: var(--mail-border-final-tb) solid transparent;
+  border-bottom: var(--mail-border-final-tb) solid transparent;
+  transition: all 3s 1s ease;
+}
+div.mail-container.first div.mail::after {
+  border-left: var(--mail-border-final-lr) solid transparent;
+  border-right: var(--mail-border-final-lr) solid #cf6e6e;
+  border-top: var(--mail-border-final-tb) solid transparent;
+  border-bottom: var(--mail-border-final-tb) solid #cf6e6e;
+  transition: all 3s 1s ease;
+}
+div.mail-container.first div.mail a.cover {
+  border-left: var(--mail-border-final-lr) solid transparent;
+  border-right: var(--mail-border-final-lr) solid transparent;
+  border-top: var(--mail-border-final-tb) solid #b13737;
+  border-bottom: var(--mail-border-final-tb) solid transparent;
+  transition: all 3s 1s ease;
+  transform-origin: top;
+  transform: rotateX(0deg);
+}
+div.mail-container.first div.letter {
+  width: 82vw;
+  height: 30vw;
+  top: 10px;
+  left: 5px;
+  transition: all 3s 1s ease;
+}
+
+// ######### End of Mailbox First Phase responsive ############
+
+// ########## Start of Mailbox Last Phase responsive ############
+
+div.mail-container.first.last div.mail a.cover {
+  transition: all 1s ease;
+  transform: rotateX(180deg);
+}
+
+div.mail-container.first.last div.mail div.letter {
+  transition: all 2s 1s ease;
+  top: -100px;
+}
+
+// ########## End of Mailbox Last Phase responsive #############
+
 } // #### End of Mobile #####

@@ -1,9 +1,18 @@
-// function for the dropdown animation for the navigation bar
-function dropdownmenu() {
-  var x = document.getElementById("dropdownclick");
-  if (x.className === "topnav") {
-    x.className += " responsive" // add space for .dot placing
+function mailupmenu(){
+  var x = document.getElementById("changer");
+  if (x.className === "mail-container"){
+    x.className += " first";
   }else{
-    x.className = "topnav"
+  x.className = "mail-container";
+}
+}
+
+function mailupmenulast() {
+  var x = document.getElementById("changer");
+  if (x.className === "mail-container first"){
+    x.className += " last";
+  }else{
+    x.className = "mail-container first";
   }
 }
+
