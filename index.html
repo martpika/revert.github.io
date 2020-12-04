@@ -11,14 +11,22 @@
   <body>
     <div class="row">
       <div class="tree">
-        <div class="leaves-top"></div>
-        <div class="leaves-top-mid"></div>
+        <div class="leaves-top sway"></div>
+        <div class="leaves-top-mid sway"></div>
         <div class="mid-radial"></div>
-        <div class="leaves-mid"></div>
-        <div class="leaves-bottom"></div>
+        <div class="leaves-mid sway"></div>
+        <div class="leaves-bottom sway"></div>
         <div class="trunk"></div>
-        <div class="tree-shadow"></div>
       </div>
+      <div class="tree-shadow-container">
+        <div class="tree-shadow">
+          <div class="leaves-top sway"></div>
+          <div class="leaves-top-mid sway"></div>
+          <div class="leaves-mid sway"></div>
+          <div class="leaves-bottom sway"></div>
+          <div class="trunk"></div>
+        </div>
+    </div>
 
       <div class="snowflakes" aria-hidden="true">
         <div class="snowflake">❅</div>
@@ -73,6 +81,14 @@
             <div class="up"></div>
             <div class="down"></div>
           </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
         </div>
         <div class="moon">
           <ul>
@@ -88,6 +104,7 @@
       </div>
 
       <div class="penguin">
+        <div class="dialogue">Hello. My name is Peng</div>
         <div class="penguin-bottom">
           <div class="right-hand"></div>
           <div class="left-hand"></div>
@@ -109,13 +126,22 @@
           <div class="beak-top"></div>
           <div class="beak-bottom"></div>
         </div>
-        <div class="penguin-shadow"></div>
+    </div>
+    <div class="penguin-shadow-container">
+      <div class="penguin-shadow">
+        <div class="penguin-top-shadow"></div>
+        <div class="penguin-bottom-shadow">
+          <div class="right-hand-shadow"></div>
+          <div class="left-hand-shadow"></div>
+          <div class="right-feet-shadow"></div>
+          <div class="left-feet-shadow"></div>
+        </div>
+      </div>
     </div>
     
     <div class="mail-container" id="changer">
       <div class="mailbox">
-        <div class="mail-outside">
-        </div>
+        <div class="mail-outside"></div>
         <a class="mail-cover" href="javascript:void(0);"
         onclick="mailupmenu()">
           <div id="knob"></div>
@@ -127,13 +153,30 @@
         </div>
         <div class="mail-stand"></div>
       </div>
+
+      <div class="mailbox-shadow-container1">
+        <div class="mailbox-shadow-container2">
+          <div class="mailbox-shadow">
+            <div class="mail-outside-shadow"></div>
+            <a class="mail-cover-shadow"></a>
+            <div class="mail-hanger-shadow">
+              <div class="hanger-long-shadow"></div>
+              <div class="hanger-short-shadow"></div>
+            </div>
+            <div class="mail-stand-shadow"></div>
+          </div>
+        </div>
+      </div>
       
-      <div class="wrapper">
-        <div class="mail">
-          <a class="cover" href="javascript:void(0);"
+      <div class="mail" id="letter-changer">
+        <a class="cover" id="cover-cover" href="javascript:void(0);"
           onclick="mailupmenulast()"></a>
-          <div class="letter">
-          
+        <div class="letter" id="mail-letter">
+          <div class="inner-letter">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid temporibus suscipit ea alias blanditiis dolorum eos numquam, est odio inventore, nisi architecto necessitatibus hic, totam nemo? Aliquam, similique .Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid temporibus suscipit ea alias blanditiis dolorum eos numquam, est odio inventore, nisi architecto necessitatibus hic, totam nemo? Aliquam, similique
+              amet?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid temporibus suscipit ea alias blanditiis dolorum eos numquam, est odio inventore, nisi architecto necessitatibus hic, totam nemo? Aliquam, similique .Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid temporibus suscipit ea alias blanditiis dolorum eos numquam, est odio inventore, nisi architecto necessitatibus hic, totam nemo? Aliquam, similique Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid temporibus suscipit ea alias blanditiis dolorum eos numquam, est odio inventore, nisi architecto necessitatibus hic, totam nemo? Aliquam, similique .Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid temporibus suscipit ea alias blanditiis dolorum eos numquam, est odio inventore, nisi architecto necessitatibus hic, totam nemo? Aliquam, similique 
+              <a class="fold" onclick="letterback()">Click</a></p>
+            
           </div>
         </div>
       </div>
