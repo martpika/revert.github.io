@@ -719,7 +719,7 @@ svg {
     border-radius: 10px;
     top: -30px;
     left: -10px;
-    font-size: 1rem;
+    font-size: 14px;
     padding-left: 2px;
     padding-right: 2px;
     opacity: 0;
@@ -1343,6 +1343,9 @@ svg {
     overflow: hidden;
     -webkit-transition: all 2s ease;
     transition: all 2s ease;
+  }
+  .inner-letter p {
+    font-size: 16px;
   }
   div.mail *, *::before, *::after {
     position: absolute;
