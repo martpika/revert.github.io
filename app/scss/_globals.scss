@@ -53,8 +53,8 @@ div.dialogue, p, li {
     -webkit-animation-name: snowflakes-fall,snowflakes-shake;
     -webkit-animation-duration: 10s,3s;
     -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-iteration-count: infinite,infinite;
     -webkit-animation-play-state: running,running;
+    -webkit-animation-iteration-count: infinite,infinite;
     animation-name: snowflakes-fall,snowflakes-shake;
     animation-duration: 10s,3s;
     animation-timing-function: linear,ease-in-out;
@@ -226,11 +226,15 @@ svg {
   // ########## Start of Sparkles ##########
   .contain {
     position: absolute;
-    // -webkit-animation-name: flicker;
-    -webkit-animation-duration: inherit;
+    -webkit-animation-name: flicker;
+    animation-name: flicker;
+  }
+  .contain, .contain * {
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
     -webkit-animation-iteration-count: infinite;
-    //animation-name: flicker;
-    animation-duration: inherit;
+    animation-timing-function: linear, ease-in-out;
+    animation-play-state: running, running;
     animation-iteration-count: infinite;
   }
   .up {
@@ -240,7 +244,6 @@ svg {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 13px 1px rgba(255, 255, 255, .7);
     border-radius: 100%;
-
   }
   .down {
     position: absolute;
@@ -250,7 +253,6 @@ svg {
     box-shadow: 0 0 13px 1px rgba(255, 255, 255, .7);
     border-radius: 100%;
     transform: rotate(90deg);
-
   }
   div.contain:nth-of-type(1) {
     left: 58px;
@@ -315,10 +317,14 @@ svg {
     left: 280px;
     top: 50px;
     border-radius: 100%;
-    //-webkit-animation-name: moon-rotate;
+    -webkit-animation-name: moon-rotate;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 400s;
-    //animation-name: moon-rotate;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
+    animation-timing-function: linear, ease-in-out;
+    animation-play-state: running, running;
+    animation-name: moon-rotate;
     animation-iteration-count: infinite;
     animation-duration: 400s;
   }
@@ -330,10 +336,14 @@ svg {
     border-radius: 100%;
     box-shadow: 0 0 90px 70px rgba(255, 255, 255, .3);
     z-index: -1;
-    // -webkit-animation-name: moon-glow;
+    -webkit-animation-name: moon-glow;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 10s;
-    // animation-name: moon-glow;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
+    animation-timing-function: linear, ease-in-out;
+    animation-play-state: running, running;
+    animation-name: moon-glow;
     animation-iteration-count: infinite;
     animation-duration: 10s;
   }
@@ -420,6 +430,14 @@ svg {
     left: -10px;
     z-index: 1;
   }
+  div.tree * {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
+    animation-timing-function: linear, ease-in-out;
+    animation-play-state: running, running;
+    animation-iteration-count: infinite;
+  }
   div.tree-lights {
     position: absolute;
     z-index: 3;
@@ -430,10 +448,8 @@ svg {
     width: 6px;
     height: 9px;
     border-radius: 100%;
-    -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both; 
-    animation-iteration-count: infinite;
     animation-duration: 1s;
     animation-fill-mode: both; 
   }
@@ -652,6 +668,14 @@ svg {
   height: var(--penguin-size, 200px);
   z-index: 1;
 }
+.penguin * {
+  -webkit-animation-timing-function: linear,ease-in-out;
+  -webkit-animation-play-state: running,running;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out;
+  animation-play-state: running, running;
+}
 .dialogue {
   position: absolute;
   height: 35px;
@@ -666,12 +690,9 @@ svg {
   transform: rotate(0deg);
   transform-origin: bottom;
   -webkit-animation-name: dia-change;
-  -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 10s;
   animation-name: dia-change;
-  animation-iteration-count: infinite;
   animation-duration: 10s;
-
 }
 @keyframes dia-change {
   10% {transform: rotate(-5deg); }
@@ -745,8 +766,8 @@ svg {
   transform-origin:0% 0%;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: wave;
-  -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -841,7 +862,6 @@ svg {
 .penguin * {
   position: absolute;
 }
-
 @keyframes wave {
   10% {
     transform: rotate(110deg);
@@ -905,6 +925,8 @@ svg {
   -webkit-animation-name: wave;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-animation-play-state: running, running;
+  animation-play-state: running, running;
   animation-duration: 3s;
   animation-name: wave;
   animation-iteration-count: infinite;
@@ -962,6 +984,10 @@ div.mailbox {
   -webkit-animation-name: mail-wave;
   -webkit-animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running, running;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  animation-timing-function: linear, ease-in-out;
+  animation-play-state: running, running;
   animation-name: mail-wave;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -1069,6 +1095,10 @@ div.mailbox-shadow {
   -webkit-animation-name: mail-wave;
   -webkit-animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-play-state: running, running;
+  animation-timing-function: linear, ease-in-out;
+  animation-play-state: running, running;
   animation-name: mail-wave;
   animation-duration: 10s;
   animation-iteration-count: infinite;
