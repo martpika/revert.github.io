@@ -315,12 +315,6 @@ svg {
   }
   .contain {
     position: absolute;
-    -webkit-animation-name: flicker;
-            animation-name: flicker;
-    -webkit-animation-duration: inherit;
-            animation-duration: inherit;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
   }
   .up {
     position: absolute;

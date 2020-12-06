@@ -226,9 +226,6 @@ svg {
   // ########## Start of Sparkles ##########
   .contain {
     position: absolute;
-    animation-name: flicker;
-    animation-duration: inherit;
-    animation-iteration-count: infinite;
   }
   .up {
     position: absolute;
