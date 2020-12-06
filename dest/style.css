@@ -315,6 +315,12 @@ svg {
   }
   .contain {
     position: absolute;
+    -webkit-animation-name: flicker;
+            animation-name: flicker;
+    -webkit-animation-duration: inherit;
+            animation-duration: inherit;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
   .up {
     position: absolute;
@@ -324,12 +330,6 @@ svg {
     -webkit-box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
             box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
     border-radius: 100%;
-    -webkit-animation-name: flicker;
-            animation-name: flicker;
-    -webkit-animation-duration: inherit;
-            animation-duration: inherit;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
   }
   .down {
     position: absolute;
@@ -341,12 +341,6 @@ svg {
     border-radius: 100%;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
-    -webkit-animation-name: flicker;
-            animation-name: flicker;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
   }
   div.contain:nth-of-type(1) {
     left: 58px;
