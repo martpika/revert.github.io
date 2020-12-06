@@ -15,6 +15,9 @@ body {
 }
 
 // ########## Start of Snowflakes #######
+div.dialogue, p, li {
+  opacity: 0;
+}
 .snowflake {
   color: #fff;
   font-size: 1em;
@@ -198,6 +201,9 @@ svg {
 
 // ################ Start of Mobile ################
 @media screen and(max-width: 400px) {
+  li, p {
+    opacity: 1;
+  }
   svg {
     position: absolute;
     bottom: 170px;
@@ -218,7 +224,6 @@ svg {
   }
 
   // ########## Start of Sparkles ##########
-
   .contain {
     position: absolute;
   }
@@ -398,6 +403,88 @@ svg {
     left: -10px;
     z-index: 1;
   }
+  div.tree-lights {
+    position: absolute;
+    z-index: 3;
+  }
+  div.tree-lights ul li {
+    list-style: none;
+    position: absolute;
+    width: 6px;
+    height: 9px;
+    border-radius: 100%;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: both; 
+  }
+  div.tree-lights ul li::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 3px;
+    background-color: rgb(15, 15, 15);
+    border-radius: 4px;
+  }
+  div.tree-lights ul li:nth-child(1){
+    top: 128px;
+    left: 54px;
+    animation-name: flash-one;
+  }
+  div.tree-lights ul li:nth-child(2){
+    top: 128px;
+    left: 158px;
+    animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(3){
+    top: 150px;
+    left: 44px;
+    animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(4){
+    top: 150px;
+    left: 168px;
+    animation-name: flash-one;
+  }
+  div.tree-lights ul li:nth-child(5){
+    top: 176px;
+    left: 32px;
+    animation-name: flash-one;
+  }
+  div.tree-lights ul li:nth-child(6){
+    top: 176px;
+    left: 182px;
+    animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(7){
+    top: 200px;
+    left: 20px;
+    animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(8){
+    top: 200px;
+    left: 194px;
+    animation-name: flash-one;
+  }
+  @keyframes flash-one {
+    0%, 100% {
+      background: rgba(255, 0, 0, 1);
+      box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 1);
+    }
+    50% {
+      background: rgba(255, 0, 0, .5);
+      box-shadow: 0 1px 20px 2px rgba(255, 0, 0, .3);
+    }
+  }
+  @keyframes flash-two {
+    50% {
+      background: rgb(232, 236, 0);
+      box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 1);
+    }
+    0%, 100% {
+      background: rgba(232, 236, 0, .5);
+      box-shadow: 0 1px 20px 2px rgba(232, 236, 0, .3);
+    }
+  }
   div.tree .leaves-top {
     bottom: 40%;
     left: 27%;
@@ -430,11 +517,11 @@ svg {
     border-top: 90px solid transparent;
     border-bottom: 70px solid var(--leaves-color);
   }
-  .sway {
-    animation-name: sway;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-  }
+  // .sway {
+  //   animation-name: sway;
+  //   animation-iteration-count: infinite;
+  //   animation-duration: 10s;
+  // }
   @keyframes sway {
     0% { transform: skewY(0deg); }
     33% {transform: skewY(-2deg); }

@@ -18,6 +18,10 @@ body {
           box-sizing: inherit;
 }
 
+div.dialogue, p, li {
+  opacity: 0;
+}
+
 .snowflake {
   color: #fff;
   font-size: 1em;
@@ -286,6 +290,9 @@ svg {
 }
 
 @media screen and (max-width: 400px) {
+  li, p {
+    opacity: 1;
+  }
   svg {
     position: absolute;
     bottom: 170px;
@@ -552,6 +559,127 @@ svg {
     left: -10px;
     z-index: 1;
   }
+  div.tree-lights {
+    position: absolute;
+    z-index: 3;
+  }
+  div.tree-lights ul li {
+    list-style: none;
+    position: absolute;
+    width: 6px;
+    height: 9px;
+    border-radius: 100%;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  div.tree-lights ul li::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 3px;
+    background-color: #0f0f0f;
+    border-radius: 4px;
+  }
+  div.tree-lights ul li:nth-child(1) {
+    top: 128px;
+    left: 54px;
+    -webkit-animation-name: flash-one;
+            animation-name: flash-one;
+  }
+  div.tree-lights ul li:nth-child(2) {
+    top: 128px;
+    left: 158px;
+    -webkit-animation-name: flash-two;
+            animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(3) {
+    top: 150px;
+    left: 44px;
+    -webkit-animation-name: flash-two;
+            animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(4) {
+    top: 150px;
+    left: 168px;
+    -webkit-animation-name: flash-one;
+            animation-name: flash-one;
+  }
+  div.tree-lights ul li:nth-child(5) {
+    top: 176px;
+    left: 32px;
+    -webkit-animation-name: flash-one;
+            animation-name: flash-one;
+  }
+  div.tree-lights ul li:nth-child(6) {
+    top: 176px;
+    left: 182px;
+    -webkit-animation-name: flash-two;
+            animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(7) {
+    top: 200px;
+    left: 20px;
+    -webkit-animation-name: flash-two;
+            animation-name: flash-two;
+  }
+  div.tree-lights ul li:nth-child(8) {
+    top: 200px;
+    left: 194px;
+    -webkit-animation-name: flash-one;
+            animation-name: flash-one;
+  }
+  @-webkit-keyframes flash-one {
+    0%, 100% {
+      background: red;
+      -webkit-box-shadow: 0 1px 20px 2px red;
+              box-shadow: 0 1px 20px 2px red;
+    }
+    50% {
+      background: rgba(255, 0, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
+              box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
+    }
+  }
+  @keyframes flash-one {
+    0%, 100% {
+      background: red;
+      -webkit-box-shadow: 0 1px 20px 2px red;
+              box-shadow: 0 1px 20px 2px red;
+    }
+    50% {
+      background: rgba(255, 0, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
+              box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
+    }
+  }
+  @-webkit-keyframes flash-two {
+    50% {
+      background: #e8ec00;
+      -webkit-box-shadow: 0 1px 20px 2px #e8ec00;
+              box-shadow: 0 1px 20px 2px #e8ec00;
+    }
+    0%, 100% {
+      background: rgba(232, 236, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+              box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+    }
+  }
+  @keyframes flash-two {
+    50% {
+      background: #e8ec00;
+      -webkit-box-shadow: 0 1px 20px 2px #e8ec00;
+              box-shadow: 0 1px 20px 2px #e8ec00;
+    }
+    0%, 100% {
+      background: rgba(232, 236, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+              box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+    }
+  }
   div.tree .leaves-top {
     bottom: 40%;
     left: 27%;
@@ -583,14 +711,6 @@ svg {
     border-right: 90px solid transparent;
     border-top: 90px solid transparent;
     border-bottom: 70px solid var(--leaves-color);
-  }
-  .sway {
-    -webkit-animation-name: sway;
-            animation-name: sway;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s;
   }
   @-webkit-keyframes sway {
     0% {
