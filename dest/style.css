@@ -315,6 +315,12 @@ svg {
   }
   .contain {
     position: absolute;
+    animation-name: flicker;
+    animation-duration: inherit;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: flicker;
+    -webkit-animation-duration: inherit;
+    -webkit-animation-iteration-count: infinite;
   }
   .up {
     position: absolute;
@@ -339,56 +345,56 @@ svg {
   div.contain:nth-of-type(1) {
     left: 58px;
     top: 50px;
+    animation-duration: 8s;
     -webkit-animation-duration: 8s;
-            animation-duration: 8s;
   }
   div.contain:nth-of-type(2) {
     left: 77px;
     top: 250px;
+    animation-duration: 4s;
     -webkit-animation-duration: 4s;
-            animation-duration: 4s;
   }
   div.contain:nth-of-type(3) {
     left: 153px;
     top: 170px;
-    -webkit-animation-duration: .5s;
-            animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-duration: 5s;
   }
   div.contain:nth-of-type(4) {
     left: 161px;
     top: 360px;
+    animation-duration: 2s;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
   }
   div.contain:nth-of-type(5) {
     left: 50px;
     top: 438px;
+    animation-duration: 1.3s;
     -webkit-animation-duration: 1.3s;
-            animation-duration: 1.3s;
   }
   div.contain:nth-of-type(6) {
     left: 345px;
     top: 263px;
+    animation-duration: 3s;
     -webkit-animation-duration: 3s;
-            animation-duration: 3s;
   }
   div.contain:nth-of-type(7) {
     left: 321px;
     top: 463px;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: .9s;
+    -webkit-animation-duration: .9s;
   }
   div.contain:nth-of-type(8) {
     left: 301px;
     top: 403px;
+    animation-duration: 1s;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
   }
   div.contain:nth-of-type(9) {
     left: 233px;
     top: 300px;
+    animation-duration: .8s;
     -webkit-animation-duration: .8s;
-            animation-duration: .8s;
   }
   div.moon {
     position: absolute;
@@ -401,12 +407,12 @@ svg {
     left: 280px;
     top: 50px;
     border-radius: 100%;
+    animation-name: moon-rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 400s;
     -webkit-animation-name: moon-rotate;
-            animation-name: moon-rotate;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-animation-duration: 400s;
-            animation-duration: 400s;
   }
   div.moon div.moon-shadow {
     position: absolute;
@@ -417,12 +423,12 @@ svg {
     -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
     z-index: -1;
+    animation-name: moon-glow;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
     -webkit-animation-name: moon-glow;
-            animation-name: moon-glow;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-animation-duration: 10s;
-            animation-duration: 10s;
   }
   @-webkit-keyframes moon-glow {
     0% {
@@ -557,12 +563,12 @@ svg {
     width: 6px;
     height: 9px;
     border-radius: 100%;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
   }
   div.tree-lights ul li::before {
     content: "";
@@ -575,50 +581,50 @@ svg {
   div.tree-lights ul li:nth-child(1) {
     top: 128px;
     left: 54px;
+    animation-name: flash-one;
     -webkit-animation-name: flash-one;
-            animation-name: flash-one;
   }
   div.tree-lights ul li:nth-child(2) {
     top: 128px;
     left: 158px;
+    animation-name: flash-two;
     -webkit-animation-name: flash-two;
-            animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(3) {
     top: 150px;
     left: 44px;
+    animation-name: flash-two;
     -webkit-animation-name: flash-two;
-            animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(4) {
     top: 150px;
     left: 168px;
+    animation-name: flash-one;
     -webkit-animation-name: flash-one;
-            animation-name: flash-one;
   }
   div.tree-lights ul li:nth-child(5) {
     top: 176px;
     left: 32px;
+    animation-name: flash-one;
     -webkit-animation-name: flash-one;
-            animation-name: flash-one;
   }
   div.tree-lights ul li:nth-child(6) {
     top: 176px;
     left: 182px;
+    animation-name: flash-two;
     -webkit-animation-name: flash-two;
-            animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(7) {
     top: 200px;
     left: 20px;
+    animation-name: flash-two;
     -webkit-animation-name: flash-two;
-            animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(8) {
     top: 200px;
     left: 194px;
+    animation-name: flash-one;
     -webkit-animation-name: flash-one;
-            animation-name: flash-one;
   }
   @-webkit-keyframes flash-one {
     0%, 100% {
@@ -835,12 +841,12 @@ svg {
             transform: rotate(0deg);
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
+    animation-name: dia-change;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
     -webkit-animation-name: dia-change;
-            animation-name: dia-change;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-animation-duration: 10s;
-            animation-duration: 10s;
   }
   @-webkit-keyframes dia-change {
     10% {
@@ -947,16 +953,16 @@ svg {
     -webkit-transform: rotate(130deg);
             transform: rotate(130deg);
     z-index: 0;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-name: wave;
-            animation-name: wave;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: wave;
+    -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
   }
   .left-hand {
     top: 0%;
@@ -1131,16 +1137,16 @@ svg {
     -webkit-transform: rotate(130deg);
             transform: rotate(130deg);
     z-index: 0;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-name: wave;
-            animation-name: wave;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: wave;
+    -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
   }
   .left-hand-shadow {
     top: 0%;
@@ -1189,15 +1195,15 @@ svg {
     position: absolute;
     height: 110px;
     width: 100px;
-    -webkit-animation-name: mail-wave;
-            animation-name: mail-wave;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
     z-index: 5;
+    animation-name: mail-wave;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: mail-wave;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
   }
   div.mailbox div.mail-outside {
     width: 50px;
@@ -1328,15 +1334,15 @@ svg {
     position: absolute;
     height: 120px;
     width: 100px;
-    -webkit-animation-name: mail-wave;
-            animation-name: mail-wave;
+    z-index: 2;
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
+    animation-name: mail-wave;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: mail-wave;
     -webkit-animation-duration: 10s;
-            animation-duration: 10s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    z-index: 2;
   }
   div.mailbox-shadow div.mail-outside-shadow {
     width: 50px;
