@@ -315,10 +315,8 @@ svg {
   }
   .contain {
     position: absolute;
-    -webkit-animation-name: flicker;
     -webkit-animation-duration: inherit;
     -webkit-animation-iteration-count: infinite;
-    animation-name: flicker;
     animation-duration: inherit;
     animation-iteration-count: infinite;
   }
@@ -407,10 +405,8 @@ svg {
     left: 280px;
     top: 50px;
     border-radius: 100%;
-    -webkit-animation-name: moon-rotate;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 400s;
-    animation-name: moon-rotate;
     animation-iteration-count: infinite;
     animation-duration: 400s;
   }
@@ -423,10 +419,8 @@ svg {
     -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
     z-index: -1;
-    -webkit-animation-name: moon-glow;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 10s;
-    animation-name: moon-glow;
     animation-iteration-count: infinite;
     animation-duration: 10s;
   }
