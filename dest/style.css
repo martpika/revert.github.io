@@ -313,281 +313,18 @@ svg {
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(#b6c4ca));
     background: linear-gradient(to bottom, white, #b6c4ca);
   }
-  .contain {
+  div.tree-container {
     position: absolute;
-    -webkit-animation-name: flicker;
-    animation-name: flicker;
-  }
-  .contain, .contain * {
-    -webkit-transition: ease;
-    transition: ease;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear, ease-in-out;
-            animation-timing-function: linear, ease-in-out;
-    -webkit-animation-play-state: running, running;
-            animation-play-state: running, running;
-    animation-iteration-count: infinite;
-  }
-  .up {
-    position: absolute;
-    width: 1px;
-    height: 5px;
-    background-color: white;
-    -webkit-box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
-    border-radius: 100%;
-  }
-  .down {
-    position: absolute;
-    width: 1px;
-    height: 5px;
-    background-color: white;
-    -webkit-box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
-    border-radius: 100%;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  div.contain:nth-of-type(1) {
-    left: 58px;
-    top: 50px;
-    -webkit-animation-duration: 8s;
-    animation-duration: 8s;
-  }
-  div.contain:nth-of-type(2) {
-    left: 77px;
-    top: 250px;
-    -webkit-animation-duration: 4s;
-    animation-duration: 4s;
-  }
-  div.contain:nth-of-type(3) {
-    left: 153px;
-    top: 170px;
-    -webkit-animation-duration: 5s;
-    animation-duration: .5s;
-  }
-  div.contain:nth-of-type(4) {
-    left: 161px;
-    top: 360px;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-  }
-  div.contain:nth-of-type(5) {
-    left: 50px;
-    top: 438px;
-    -webkit-animation-duration: 1.3s;
-    animation-duration: 1.3s;
-  }
-  div.contain:nth-of-type(6) {
-    left: 345px;
-    top: 263px;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-  }
-  div.contain:nth-of-type(7) {
-    left: 321px;
-    top: 463px;
-    -webkit-animation-duration: .9s;
-    animation-duration: .9s;
-  }
-  div.contain:nth-of-type(8) {
-    left: 301px;
-    top: 403px;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-  }
-  div.contain:nth-of-type(9) {
-    left: 233px;
-    top: 300px;
-    -webkit-animation-duration: .8s;
-    animation-duration: .8s;
-  }
-  div.moon {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: -webkit-gradient(linear, left top, right top, from(white), to(#bed5ff));
-    background: linear-gradient(to right, white, #bed5ff);
-    -webkit-box-shadow: inset -12px 0px 0 0px #9098a1;
-            box-shadow: inset -12px 0px 0 0px #9098a1;
-    left: 280px;
-    top: 50px;
-    border-radius: 100%;
-    -webkit-transition: ease;
-    transition: ease;
-    -webkit-animation-name: moon-rotate;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 400s;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    -webkit-animation-timing-function: linear, ease-in-out;
-            animation-timing-function: linear, ease-in-out;
-    -webkit-animation-play-state: running, running;
-            animation-play-state: running, running;
-    animation-name: moon-rotate;
-    animation-iteration-count: infinite;
-    animation-duration: 400s;
-  }
-  div.moon div.moon-shadow {
-    position: absolute;
-    width: 80px;
-    top: 0;
-    height: 80px;
-    border-radius: 100%;
-    -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    z-index: -1;
-    -webkit-transition: ease;
-    transition: ease;
-    -webkit-animation-name: moon-glow;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    -webkit-animation-timing-function: linear, ease-in-out;
-            animation-timing-function: linear, ease-in-out;
-    -webkit-animation-play-state: running, running;
-            animation-play-state: running, running;
-    animation-name: moon-glow;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-  }
-  @-webkit-keyframes moon-glow {
-    0% {
-      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      -webkit-box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-    }
-    100% {
-      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    }
-  }
-  @keyframes moon-glow {
-    0% {
-      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      -webkit-box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-    }
-    100% {
-      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    }
-  }
-  div.moon ul li {
-    position: absolute;
-    list-style: none;
-    background-color: #737277;
-    border-radius: 100%;
-    opacity: .7;
-  }
-  div.moon li:nth-child(1) {
-    left: 10%;
-    top: 40%;
-    width: 27%;
-    height: 27%;
-    -webkit-box-shadow: inset 6px -2px 0 0px #414043;
-            box-shadow: inset 6px -2px 0 0px #414043;
-  }
-  div.moon li:nth-child(2) {
-    left: 70%;
-    top: 20%;
-    width: 20%;
-    height: 20%;
-    -webkit-box-shadow: inset 3px -1px 0 0px #414043;
-            box-shadow: inset 3px -1px 0 0px #414043;
-  }
-  div.moon li:nth-child(3) {
-    left: 50%;
-    top: 80%;
-    width: 10%;
-    height: 10%;
-    -webkit-box-shadow: inset 3px -1px 0 0px #414043;
-            box-shadow: inset 3px -1px 0 0px #414043;
-  }
-  div.moon li:nth-child(4) {
-    left: 68%;
-    top: 63%;
-    width: 14%;
-    height: 14%;
-    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
-            box-shadow: inset 2.4px -0.8px 0 0px #414043;
-  }
-  div.moon li:nth-child(5) {
-    left: 30%;
-    top: 10%;
-    width: 11%;
-    height: 11%;
-    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
-            box-shadow: inset 2.4px -0.8px 0 0px #414043;
-  }
-  div.moon li:nth-child(6) {
-    left: 46%;
-    top: 50%;
-    width: 12%;
-    height: 12%;
-    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
-            box-shadow: inset 2.4px -0.8px 0 0px #414043;
-  }
-  div.moon li:nth-child(7) {
-    left: 181.81818182px;
-    top: 100px;
-    width: 12.5px;
-    height: 12.5px;
-    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
-            box-shadow: inset 2.4px -0.8px 0 0px #414043;
-  }
-  @-webkit-keyframes flicker {
-    50% {
-      -webkit-box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-              box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-    }
-  }
-  @keyframes flicker {
-    50% {
-      -webkit-box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-              box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-    }
-  }
-  @-webkit-keyframes moon-rotate {
-    50% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes moon-rotate {
-    50% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
+    bottom: 440px;
+    left: -10px;
   }
   div.tree {
     width: 200px;
     height: 240px;
     position: absolute;
-    bottom: 200px;
-    left: -10px;
-    z-index: 1;
-  }
-  div.tree * {
+    z-index: 5;
     -webkit-transition: ease;
     transition: ease;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    -webkit-animation-timing-function: linear, ease-in-out;
-            animation-timing-function: linear, ease-in-out;
-    -webkit-animation-play-state: running, running;
-            animation-play-state: running, running;
-    animation-iteration-count: infinite;
   }
   div.tree-lights {
     position: absolute;
@@ -599,10 +336,20 @@ svg {
     width: 6px;
     height: 9px;
     border-radius: 100%;
+    -webkit-transition: ease;
+    transition: ease;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
     animation-duration: 1s;
     animation-fill-mode: both;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-play-state: running, running;
+            animation-play-state: running, running;
+    animation-iteration-count: infinite;
   }
   div.tree-lights ul li::before {
     content: "";
@@ -776,13 +523,14 @@ svg {
               transform: skewY(2deg);
     }
   }
-  div.tree .trunk {
-    bottom: 1px;
-    left: 43%;
+  div.tree-container .trunk {
+    position: absolute;
+    bottom: -239px;
+    left: 85px;
     border-left: 23px solid transparent;
     border-right: 23px solid transparent;
     border-bottom: 80px solid #603913;
-    z-index: -1;
+    z-index: 1;
   }
   div.tree .mid-radial {
     top: 65%;
@@ -861,6 +609,254 @@ svg {
   }
   div.tree-shadow * {
     position: absolute;
+  }
+  .contain {
+    position: absolute;
+    -webkit-animation-name: flicker;
+    animation-name: flicker;
+  }
+  .contain, .contain * {
+    -webkit-transition: ease;
+    transition: ease;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-play-state: running, running;
+            animation-play-state: running, running;
+    animation-iteration-count: infinite;
+  }
+  .up {
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+  }
+  .down {
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 13px 1px rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  div.contain:nth-of-type(1) {
+    left: 58px;
+    top: 50px;
+    -webkit-animation-duration: 8s;
+    animation-duration: 8s;
+  }
+  div.contain:nth-of-type(2) {
+    left: 77px;
+    top: 250px;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+  }
+  div.contain:nth-of-type(3) {
+    left: 153px;
+    top: 170px;
+    -webkit-animation-duration: 5s;
+    animation-duration: .5s;
+  }
+  div.contain:nth-of-type(4) {
+    left: 161px;
+    top: 360px;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  div.contain:nth-of-type(5) {
+    left: 50px;
+    top: 438px;
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+  }
+  div.contain:nth-of-type(6) {
+    left: 345px;
+    top: 263px;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+  }
+  div.contain:nth-of-type(7) {
+    left: 321px;
+    top: 463px;
+    -webkit-animation-duration: .9s;
+    animation-duration: .9s;
+  }
+  div.contain:nth-of-type(8) {
+    left: 301px;
+    top: 403px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+  div.contain:nth-of-type(9) {
+    left: 233px;
+    top: 300px;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+  }
+  div.moon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: -webkit-gradient(linear, left top, right top, from(white), to(#bed5ff));
+    background: linear-gradient(to right, white, #bed5ff);
+    -webkit-box-shadow: inset -12px 0px 0 0px #9098a1;
+            box-shadow: inset -12px 0px 0 0px #9098a1;
+    left: 280px;
+    top: 50px;
+    border-radius: 100%;
+    -webkit-transition: ease;
+    transition: ease;
+    -webkit-animation-name: moon-rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 400s;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-play-state: running, running;
+            animation-play-state: running, running;
+    animation-name: moon-rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 400s;
+  }
+  div.moon div.moon-shadow {
+    position: absolute;
+    width: 80px;
+    top: 0;
+    height: 80px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    -webkit-transition: ease;
+    transition: ease;
+    -webkit-animation-name: moon-glow;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: linear,ease-in-out;
+    -webkit-animation-play-state: running,running;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-play-state: running, running;
+            animation-play-state: running, running;
+    animation-name: moon-glow;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+  }
+  @-webkit-keyframes moon-glow {
+    0% {
+      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
+              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      -webkit-box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
+              box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
+    }
+  }
+  @keyframes moon-glow {
+    0% {
+      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
+              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      -webkit-box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
+              box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
+    }
+  }
+  div.moon ul li {
+    position: absolute;
+    list-style: none;
+    background-color: #737277;
+    border-radius: 100%;
+    opacity: .7;
+  }
+  div.moon li:nth-child(1) {
+    left: 10%;
+    top: 40%;
+    width: 27%;
+    height: 27%;
+    -webkit-box-shadow: inset 6px -2px 0 0px #414043;
+            box-shadow: inset 6px -2px 0 0px #414043;
+  }
+  div.moon li:nth-child(2) {
+    left: 70%;
+    top: 20%;
+    width: 20%;
+    height: 20%;
+    -webkit-box-shadow: inset 3px -1px 0 0px #414043;
+            box-shadow: inset 3px -1px 0 0px #414043;
+  }
+  div.moon li:nth-child(3) {
+    left: 50%;
+    top: 80%;
+    width: 10%;
+    height: 10%;
+    -webkit-box-shadow: inset 3px -1px 0 0px #414043;
+            box-shadow: inset 3px -1px 0 0px #414043;
+  }
+  div.moon li:nth-child(4) {
+    left: 68%;
+    top: 63%;
+    width: 14%;
+    height: 14%;
+    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
+            box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  div.moon li:nth-child(5) {
+    left: 30%;
+    top: 10%;
+    width: 11%;
+    height: 11%;
+    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
+            box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  div.moon li:nth-child(6) {
+    left: 46%;
+    top: 50%;
+    width: 12%;
+    height: 12%;
+    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
+            box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  div.moon li:nth-child(7) {
+    left: 181.81818182px;
+    top: 100px;
+    width: 12.5px;
+    height: 12.5px;
+    -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
+            box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  @-webkit-keyframes flicker {
+    50% {
+      -webkit-box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
+              box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
+    }
+  }
+  @keyframes flicker {
+    50% {
+      -webkit-box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
+              box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
+    }
+  }
+  @-webkit-keyframes moon-rotate {
+    50% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes moon-rotate {
+    50% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
   .penguin {
     position: absolute;

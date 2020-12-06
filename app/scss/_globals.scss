@@ -223,6 +223,250 @@ svg {
     background:linear-gradient(to bottom, white, rgb(182, 196, 202));
   }
 
+
+// ########### Start of Tree #############
+div.tree-container {
+  position: absolute;
+  bottom: 440px;
+  left: -10px;
+}
+div.tree {
+  width: 200px;
+  height: 240px;
+  position: absolute;
+  z-index: 5;
+  transition: ease;
+}
+div.tree-lights {
+  position: absolute;
+  z-index: 3;
+}
+div.tree-lights ul li {
+  list-style: none;
+  position: absolute;
+  width: 6px;
+  height: 9px;
+  border-radius: 100%;
+  transition: ease;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear,ease-in-out;
+  -webkit-animation-play-state: running,running;
+  animation-duration: 1s;
+  animation-fill-mode: both; 
+  animation-timing-function: linear, ease-in-out;
+  animation-play-state: running, running;
+  animation-iteration-count: infinite;
+}
+div.tree-lights ul li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  background-color: rgb(15, 15, 15);
+  border-radius: 4px;
+}
+div.tree-lights ul li:nth-child(1){
+  top: 128px;
+  left: 54px;
+  -webkit-animation-name: flash-one;
+  animation-name: flash-one;
+}
+div.tree-lights ul li:nth-child(2){
+  top: 128px;
+  left: 158px;
+  -webkit-animation-name: flash-two;
+  animation-name: flash-two;
+}
+div.tree-lights ul li:nth-child(3){
+  top: 150px;
+  left: 44px;
+  -webkit-animation-name: flash-two;
+  animation-name: flash-two;
+}
+div.tree-lights ul li:nth-child(4){
+  top: 150px;
+  left: 168px;
+  -webkit-animation-name: flash-one;
+  animation-name: flash-one;
+}
+div.tree-lights ul li:nth-child(5){
+  top: 176px;
+  left: 32px;
+  -webkit-animation-name: flash-one;
+  animation-name: flash-one;
+}
+div.tree-lights ul li:nth-child(6){
+  top: 176px;
+  left: 182px;
+  -webkit-animation-name: flash-two;
+  animation-name: flash-two;
+}
+div.tree-lights ul li:nth-child(7){
+  top: 200px;
+  left: 20px;
+  -webkit-animation-name: flash-two;
+  animation-name: flash-two;
+}
+div.tree-lights ul li:nth-child(8){
+  top: 200px;
+  left: 194px;
+  -webkit-animation-name: flash-one;
+  animation-name: flash-one;
+}
+@keyframes flash-one {
+  0%, 100% {
+    background: rgba(255, 0, 0, 1);
+    box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 1);
+  }
+  50% {
+    background: rgba(255, 0, 0, .5);
+    box-shadow: 0 1px 20px 2px rgba(255, 0, 0, .3);
+  }
+}
+@keyframes flash-two {
+  50% {
+    background: rgb(232, 236, 0);
+    box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 1);
+  }
+  0%, 100% {
+    background: rgba(232, 236, 0, .5);
+    box-shadow: 0 1px 20px 2px rgba(232, 236, 0, .3);
+  }
+}
+div.tree .leaves-top {
+  bottom: 40%;
+  left: 27%;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 55px solid var(--leaves-color);
+}
+div.tree .leaves-top-mid {
+  bottom: 31%;
+  left: 22%;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 60px solid var(--leaves-color);
+}
+div.tree .leaves-mid {
+  bottom: 20%;
+  left: 16%;
+  border-left: 78px solid transparent;
+  border-right: 78px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 70px solid var(--leaves-color);
+}
+div.tree .leaves-bottom {
+  bottom: 10%;
+  left: 10%;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 70px solid var(--leaves-color);
+}
+.sway {
+  -webkit-animation-name: sway;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  animation-name: sway;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+@keyframes sway {
+  0% { transform: skewY(0deg); }
+  33% {transform: skewY(-2deg); }
+  66% {transform: skewY(2deg); }
+}
+div.tree-container .trunk {
+  position: absolute;
+  bottom: -239px;
+  left: 85px;
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+  border-bottom: 80px solid #603913;
+  z-index: 1;
+}
+div.tree .mid-radial {
+  top: 65%;
+  left: 55%;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  box-shadow: 0 0 8px 30px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+div.tree * {
+  position: absolute;
+}
+// #################### End of Tree ###################
+// ################ Start of Tree Shadow ##############
+div.tree-shadow-container {
+  position: absolute;
+  left: 193px;
+  bottom: 443px;
+  transform: skewX(-40deg);
+  z-index: 1;
+  transition: ease;
+  opacity: .2;
+}
+div.tree-shadow {
+  position: absolute;
+  width: 200px;
+  height: 240px;
+  z-index: 1;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+div.tree-shadow .leaves-top {
+  bottom: 40%;
+  left: 27%;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 55px solid var(--tree-shadow);
+}
+div.tree-shadow .leaves-top-mid {
+  bottom: 31%;
+  left: 22%;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 60px solid var(--tree-shadow);
+}
+div.tree-shadow .leaves-mid {
+  bottom: 20%;
+  left: 16%;
+  border-left: 78px solid transparent;
+  border-right: 78px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 70px solid var(--tree-shadow);
+}
+div.tree-shadow .leaves-bottom {
+  bottom: 10%;
+  left: 10%;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 70px solid var(--tree-shadow);
+}
+div.tree-shadow .trunk {
+  bottom: 1px;
+  left: 43%;
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+  border-top: 90px solid transparent;
+  border-bottom: 80px solid var(--tree-shadow);
+  z-index: -1;
+}
+div.tree-shadow * {
+  position: absolute;
+}
+// ########### End of Tree Shadow ##############
+
+
   // ########## Start of Sparkles ##########
   .contain {
     position: absolute;
@@ -353,7 +597,6 @@ svg {
   @keyframes moon-glow {
     0% {box-shadow: 0 0 90px 70px rgba(255, 255, 255, .3);}
     50% {box-shadow: 0 0 90px 120px rgba(255, 255, 255, .3);}
-    100% {box-shadow: 0 0 90px 70px rgba(255, 255, 255, .3);}
   }
   div.moon ul li {
     position: absolute;
@@ -423,246 +666,6 @@ svg {
   }
   // ########### End of Sparkles ##############
 
-
-  // ########### Start of Tree #############
-  div.tree {
-    width: 200px;
-    height: 240px;
-    position: absolute;
-    bottom: 200px;
-    left: -10px;
-    z-index: 1;
-  }
-  div.tree * {
-    transition: ease;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    animation-timing-function: linear, ease-in-out;
-    animation-play-state: running, running;
-    animation-iteration-count: infinite;
-  }
-  div.tree-lights {
-    position: absolute;
-    z-index: 3;
-  }
-  div.tree-lights ul li {
-    list-style: none;
-    position: absolute;
-    width: 6px;
-    height: 9px;
-    border-radius: 100%;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both; 
-    animation-duration: 1s;
-    animation-fill-mode: both; 
-  }
-  div.tree-lights ul li::before {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 3px;
-    background-color: rgb(15, 15, 15);
-    border-radius: 4px;
-  }
-  div.tree-lights ul li:nth-child(1){
-    top: 128px;
-    left: 54px;
-    -webkit-animation-name: flash-one;
-    animation-name: flash-one;
-  }
-  div.tree-lights ul li:nth-child(2){
-    top: 128px;
-    left: 158px;
-    -webkit-animation-name: flash-two;
-    animation-name: flash-two;
-  }
-  div.tree-lights ul li:nth-child(3){
-    top: 150px;
-    left: 44px;
-    -webkit-animation-name: flash-two;
-    animation-name: flash-two;
-  }
-  div.tree-lights ul li:nth-child(4){
-    top: 150px;
-    left: 168px;
-    -webkit-animation-name: flash-one;
-    animation-name: flash-one;
-  }
-  div.tree-lights ul li:nth-child(5){
-    top: 176px;
-    left: 32px;
-    -webkit-animation-name: flash-one;
-    animation-name: flash-one;
-  }
-  div.tree-lights ul li:nth-child(6){
-    top: 176px;
-    left: 182px;
-    -webkit-animation-name: flash-two;
-    animation-name: flash-two;
-  }
-  div.tree-lights ul li:nth-child(7){
-    top: 200px;
-    left: 20px;
-    -webkit-animation-name: flash-two;
-    animation-name: flash-two;
-  }
-  div.tree-lights ul li:nth-child(8){
-    top: 200px;
-    left: 194px;
-    -webkit-animation-name: flash-one;
-    animation-name: flash-one;
-  }
-  @keyframes flash-one {
-    0%, 100% {
-      background: rgba(255, 0, 0, 1);
-      box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 1);
-    }
-    50% {
-      background: rgba(255, 0, 0, .5);
-      box-shadow: 0 1px 20px 2px rgba(255, 0, 0, .3);
-    }
-  }
-  @keyframes flash-two {
-    50% {
-      background: rgb(232, 236, 0);
-      box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 1);
-    }
-    0%, 100% {
-      background: rgba(232, 236, 0, .5);
-      box-shadow: 0 1px 20px 2px rgba(232, 236, 0, .3);
-    }
-  }
-  div.tree .leaves-top {
-    bottom: 40%;
-    left: 27%;
-    border-left: 55px solid transparent;
-    border-right: 55px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 55px solid var(--leaves-color);
-  }
-  div.tree .leaves-top-mid {
-    bottom: 31%;
-    left: 22%;
-    border-left: 65px solid transparent;
-    border-right: 65px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 60px solid var(--leaves-color);
-  }
-  div.tree .leaves-mid {
-    bottom: 20%;
-    left: 16%;
-    border-left: 78px solid transparent;
-    border-right: 78px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--leaves-color);
-  }
-  div.tree .leaves-bottom {
-    bottom: 10%;
-    left: 10%;
-    border-left: 90px solid transparent;
-    border-right: 90px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--leaves-color);
-  }
-  .sway {
-    -webkit-animation-name: sway;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-    animation-name: sway;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-  }
-  @keyframes sway {
-    0% { transform: skewY(0deg); }
-    33% {transform: skewY(-2deg); }
-    66% {transform: skewY(2deg); }
-  }
-  div.tree .trunk {
-    bottom: 1px;
-    left: 43%;
-    border-left: 23px solid transparent;
-    border-right: 23px solid transparent;
-    border-bottom: 80px solid #603913;
-    z-index: -1;
-  }
-  div.tree .mid-radial {
-    top: 65%;
-    left: 55%;
-    width: 3px;
-    height: 3px;
-    border-radius: 100%;
-    box-shadow: 0 0 8px 30px rgba(255, 255, 255, 0.3);
-    z-index: 2;
-  }
-  div.tree * {
-    position: absolute;
-  }
-  // ########## End of Tree #############
-  
-  // ########### Start of Tree Shadow ############
-  div.tree-shadow-container {
-    position: absolute;
-    left: 193px;
-    bottom: 443px;
-    transform: skewX(-40deg);
-    z-index: 1;
-    transition: ease;
-    opacity: .2;
-  }
-  div.tree-shadow {
-    position: absolute;
-    width: 200px;
-    height: 240px;
-    z-index: 1;
-    transform-origin: bottom;
-    transform: rotateX(180deg);
-  }
-  div.tree-shadow .leaves-top {
-    bottom: 40%;
-    left: 27%;
-    border-left: 55px solid transparent;
-    border-right: 55px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 55px solid var(--tree-shadow);
-  }
-  div.tree-shadow .leaves-top-mid {
-    bottom: 31%;
-    left: 22%;
-    border-left: 65px solid transparent;
-    border-right: 65px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 60px solid var(--tree-shadow);
-  }
-  div.tree-shadow .leaves-mid {
-    bottom: 20%;
-    left: 16%;
-    border-left: 78px solid transparent;
-    border-right: 78px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--tree-shadow);
-  }
-  div.tree-shadow .leaves-bottom {
-    bottom: 10%;
-    left: 10%;
-    border-left: 90px solid transparent;
-    border-right: 90px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--tree-shadow);
-  }
-  div.tree-shadow .trunk {
-    bottom: 1px;
-    left: 43%;
-    border-left: 23px solid transparent;
-    border-right: 23px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 80px solid var(--tree-shadow);
-    z-index: -1;
-  }
-  div.tree-shadow * {
-    position: absolute;
-  }
-  // ########### End of Tree Shadow ##############
   
   // ########## Start of Penguin ##########
 .penguin {
@@ -883,9 +886,10 @@ svg {
     transform: rotate(130deg);
   }
 }
-// ########## End of Penguin    ############
+// ################### End of Penguin    #################
 
-// ########### Start of Penguin Shadow ##########
+
+// ################# Start of Penguin Shadow ################
 .penguin-shadow-container {
   position: absolute;
   bottom: 263px;
@@ -973,9 +977,10 @@ svg {
 .penguin-shadow * {
   position: absolute;
 }
-// ########### End of Penguin Shadow ############
+// ################## End of Penguin Shadow ##################
 
-// ######### Start of Mailbox ###########
+
+// ################## Start of Mailbox ###################
 div.mail-container {
   position: absolute;
   left: 260px;
@@ -1075,9 +1080,10 @@ div.mailbox * {
   25%{transform: rotate(4deg);}
   50%{transform: rotate(-4deg);}
 }
-// ############ End of Mailbox ###################
+// ################## End of Mailbox ######################
 
-// ############ Start of Mailbox Shadow ##########
+
+// ################## Start of Mailbox Shadow #############
 div.mailbox-shadow-container1{
   position: absolute;
   left: 20px;
@@ -1158,9 +1164,10 @@ div.mailbox-shadow div.mail-stand-shadow {
 div.mailbox-shadow * {
   position: absolute;
 }
-// ############ End of Mailbox Shadow ############
+// ################### End of Mailbox Shadow ##################
 
-// ############### Start of Mail Letter ############
+
+// #################### Start of Mail Letter #################
 .mail {
   position: absolute;
   width: 6vw;
@@ -1223,9 +1230,10 @@ div.mail a.cover {
 div.mail *, *::before, *::after {
   position: absolute;
 }
-// ########## End of mail letter ################
+// ################## End of mail letter ####################
 
-// ######### Start of Mailbox First Phase responsive ###########
+
+// ############ Start of Mailbox First Phase responsive ###########
 div.mail-container.first a.mail-cover{
   transition: all 1s ease;
   transform: rotateX(180deg);
@@ -1283,9 +1291,10 @@ div.mail-container.first .letter.lela {
   transition: all 2s ease;
 }
 
-// ######### End of Mailbox First Phase responsive ############
+// ############ End of Mailbox First Phase responsive ############
 
-// ########## Start of Mailbox Last Phase responsive ############
+
+// ############ Start of Mailbox Last Phase responsive ############
 
 div.mail-container.first.last div.mail a.cover {
   transition: all 1s ease;
@@ -1306,9 +1315,10 @@ div.mail-container.first.last div.mail a.fold {
   position: none;
   text-decoration: underline;
 }
-// ########## End of Mailbox Last Phase responsive #############
+// ############ End of Mailbox Last Phase responsive #############
 
-// ############## Start of Mail Last Phase #################
+
+// ################# Start of Mail Last Phase ####################
 div.mail-container.first.last div.mail.last div.letter div.inner-letter {  
   transition: all 5s ease;
   height: 3vw;
@@ -1318,11 +1328,11 @@ div.mail-container.first.last div.mail.last div.letter {
   z-index: 1;
   top: 10px;
 }
-
 div.mail-container.first.last div.mail.last a.cover {
   transition: 1s 6s ease;
   transform: rotateX(0deg);
 }
-// ############## End of Mail Last Phase ###################
+// ################ End of Mail Last Phase ###################
 
-} // #### End of Mobile #####
+
+} // ################## End of Mobile #####################
