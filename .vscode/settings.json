@@ -1,0 +1,13 @@
+{
+    "explorer.confirmDelete": false,
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dest",
+        }
+    ],
+    "git.autofetch": true,
+    "liveServer.settings.donotShowInfoMsg": true
+}
