@@ -10,18 +10,35 @@ function mailupmenu(){
   }
 }
 
+
 function mailupmenulast() {
   var x = document.getElementById("changer");
   document.getElementById("letter-changer").className = "mail";
   if (x.className === "mail-container first"){
     x.className += " last";
   }
-  //else{
-  //   x.className = "mail-container first";
-  //   document.getElementById("mail-letter").className += " lela";
-  // }
 }
+
 
 function letterback() {
   document.getElementById("letter-changer").className += " last";
+}
+
+// Global function var for playing Christmas Sound
+var check = "off";
+var ssound = new Audio();
+ssound.src = "app/js/Happy Christmas Background Music For Videos (128 kbps).mp3";
+
+function toggle_sound() {
+  if (check === "off"){
+    check = "on";
+  } else if (check === "on") {
+    check = "off";
+  }
+  // If flag is ON, then play sound, else pause it
+  if (check === "on"){
+    ssound.play();
+  }else{
+    ssound.pause();
+  }
 }

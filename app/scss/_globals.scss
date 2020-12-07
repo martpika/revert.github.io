@@ -389,14 +389,14 @@ div.tree-container .trunk {
   border-bottom: 80px solid #603913;
   z-index: 1;
 }
-div.tree .mid-radial {
-  top: 65%;
-  left: 55%;
-  width: 3px;
-  height: 3px;
+div.tree a.mid-radial {
+  top: 220px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
-  box-shadow: 0 0 8px 30px rgba(255, 255, 255, 0.3);
-  z-index: 2;
+  background-color:teal;
+  z-index: 5;
 }
 div.tree * {
   position: absolute;
