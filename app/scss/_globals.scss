@@ -216,6 +216,7 @@ div.tree {
   height: 240px;
   position: absolute;
   z-index: 5;
+  transform: skewY(-2deg);
   transition: ease;
 }
 div.tree img.christmas-tree {
@@ -342,11 +343,9 @@ div.tree-lights ul li:nth-child(10){
   animation-iteration-count: infinite;
   animation-duration: 10s;
 }
-// @keyframes sway {
-//   0% { transform: skewY(0deg); }
-//   33% {transform: skewY(-2deg); }
-//   66% {transform: skewY(2deg); }
-// }
+@keyframes sway {
+  50% {transform: skewY(2deg); }
+}
 div.tree-container .trunk {
   position: absolute;
   bottom: -239px;
@@ -426,17 +425,6 @@ div.tree-shadow * {
   // ########## Start of Sparkles ##########
   .contain {
     position: absolute;
-    -webkit-animation-name: flicker;
-    animation-name: flicker;
-  }
-  .contain, .contain * {
-    transition: ease;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    -webkit-animation-iteration-count: infinite;
-    animation-timing-function: linear, ease-in-out;
-    animation-play-state: running, running;
-    animation-iteration-count: infinite;
   }
   .up {
     position: absolute;
@@ -458,56 +446,38 @@ div.tree-shadow * {
   div.contain:nth-of-type(1) {
     left: 58px;
     top: 50px;
-    -webkit-animation-duration: 8s;
-    animation-duration: 8s;
   }
   div.contain:nth-of-type(2) {
     left: 77px;
     top: 250px;
-    -webkit-animation-duration: 4s;
-    animation-duration: 4s;
   }
   div.contain:nth-of-type(3) {
     left: 153px;
     top: 170px;
-    -webkit-animation-duration: 5s;
-    animation-duration: .5s;
   }
   div.contain:nth-of-type(4) {
     left: 161px;
     top: 360px;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
   }
   div.contain:nth-of-type(5) {
     left: 50px;
     top: 438px;
-    -webkit-animation-duration: 1.3s;
-    animation-duration: 1.3s;
   }
   div.contain:nth-of-type(6) {
     left: 345px;
     top: 263px;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
   }
   div.contain:nth-of-type(7) {
     left: 321px;
     top: 463px;
-    -webkit-animation-duration: .9s;
-    animation-duration: .9s;
   }
   div.contain:nth-of-type(8) {
     left: 301px;
     top: 403px;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
   }
   div.contain:nth-of-type(9) {
     left: 233px;
     top: 300px;
-    -webkit-animation-duration: .8s;
-    animation-duration: .8s;
   }
   div.moon {
     position: absolute;
@@ -538,22 +508,7 @@ div.tree-shadow * {
     border-radius: 100%;
     box-shadow: 0 0 90px 70px rgba(255, 255, 255, .3);
     z-index: -1;
-    transition: ease;
-    -webkit-animation-name: moon-glow;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-    -webkit-animation-timing-function: linear,ease-in-out;
-    -webkit-animation-play-state: running,running;
-    animation-timing-function: linear, ease-in-out;
-    animation-play-state: running, running;
-    animation-name: moon-glow;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
   }
-  // @keyframes moon-glow {
-  //   0% {box-shadow: 0 0 90px 70px rgba(255, 255, 255, .3);}
-  //   50% {box-shadow: 0 0 90px 120px rgba(255, 255, 255, .3);}
-  // }
   div.moon ul li {
     position: absolute;
     list-style: none;
@@ -610,16 +565,11 @@ div.tree-shadow * {
     height: 12.5px;
     box-shadow: inset 2.4px -0.8px 0 0px #414043;
   }
-  // @keyframes flicker {
-  //   50% {
-  //     box-shadow: 0 0 13px 3px rgba(255, 255, 255, .7);
-  //   }
-  // }
-  // @keyframes moon-rotate{
-  //   50% {
-  //     transform: rotate(360deg);
-  //   }
-  // }
+  @keyframes moon-rotate{
+    50% {
+      transform: rotate(360deg);
+    }
+  }
   // ########### End of Sparkles ##############
 
   
@@ -660,13 +610,9 @@ div.tree-shadow * {
   animation-name: dia-change;
   animation-duration: 10s;
 }
-// @keyframes dia-change {
-//   10% {transform: rotate(-5deg); }
-//   20% {transform: rotate(5deg);}
-//   30% {transform: rotate(-5deg);}
-//   40% {transform: rotate(5deg);}
-//   50% {opacity: 1;}
-// }
+@keyframes dia-change {
+  50% {opacity: 1;}
+}
 .dialogue::after {
   content: "";
   position: absolute;
@@ -730,7 +676,6 @@ div.tree-shadow * {
   transform: rotate(130deg);
   z-index: 0;
   transform-origin:0% 0%;
-  transition: ease;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: wave;
   -webkit-animation-timing-function: linear;
@@ -951,17 +896,6 @@ div.mailbox {
   width: 100px;
   transform-origin: bottom;
   z-index: 5;
-  transition: ease;
-  -webkit-animation-name: mail-wave;
-  -webkit-animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-play-state: running, running;
-  -webkit-animation-timing-function: linear, ease-in-out;
-  animation-timing-function: linear, ease-in-out;
-  animation-play-state: running, running;
-  animation-name: mail-wave;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
 }
 div.mailbox div.mail-outside {
   width: 50px;
@@ -1032,19 +966,14 @@ div.mailbox div.mail-stand {
 div.mailbox * {
   position: absolute;
 }
-// @keyframes mail-wave {
-//   0%{transform: rotate(0deg);}
-//   25%{transform: rotate(4deg);}
-//   50%{transform: rotate(-4deg);}
-// }
 // ################## End of Mailbox ######################
 
 
 // ################## Start of Mailbox Shadow #############
 div.mailbox-shadow-container1{
   position: absolute;
-  left: 20px;
-  transform: skewX(-20deg);
+  left: 5px;
+  transform: skewX(-5deg);
   bottom: 0px;
   z-index: 2;
   opacity: .2;
@@ -1064,16 +993,6 @@ div.mailbox-shadow {
   width: 100px;
   z-index: 2;
   transform-origin: bottom;
-  -webkit-animation-name: mail-wave;
-  -webkit-animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear, ease-in-out;
-  -webkit-animation-play-state: running, running;
-  animation-timing-function: linear, ease-in-out;
-  animation-play-state: running, running;
-  animation-name: mail-wave;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
 }
 div.mailbox-shadow div.mail-outside-shadow {
   width: 50px;
