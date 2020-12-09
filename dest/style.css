@@ -401,6 +401,54 @@ svg {
     -webkit-animation-name: flash-two;
     animation-name: flash-one;
   }
+  @-webkit-keyframes flash-one {
+    0%, 100% {
+      background: red;
+      -webkit-box-shadow: 0 1px 20px 2px red;
+              box-shadow: 0 1px 20px 2px red;
+    }
+    50% {
+      background: rgba(255, 0, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 4px rgba(255, 0, 0, 0.7);
+              box-shadow: 0 1px 20px 4px rgba(255, 0, 0, 0.7);
+    }
+  }
+  @keyframes flash-one {
+    0%, 100% {
+      background: red;
+      -webkit-box-shadow: 0 1px 20px 2px red;
+              box-shadow: 0 1px 20px 2px red;
+    }
+    50% {
+      background: rgba(255, 0, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 4px rgba(255, 0, 0, 0.7);
+              box-shadow: 0 1px 20px 4px rgba(255, 0, 0, 0.7);
+    }
+  }
+  @-webkit-keyframes flash-two {
+    50% {
+      background: #e8ec00;
+      -webkit-box-shadow: 0 1px 20px 4px rgba(232, 236, 0, 0.7);
+              box-shadow: 0 1px 20px 4px rgba(232, 236, 0, 0.7);
+    }
+    0%, 100% {
+      background: rgba(232, 236, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+              box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+    }
+  }
+  @keyframes flash-two {
+    50% {
+      background: #e8ec00;
+      -webkit-box-shadow: 0 1px 20px 4px rgba(232, 236, 0, 0.7);
+              box-shadow: 0 1px 20px 4px rgba(232, 236, 0, 0.7);
+    }
+    0%, 100% {
+      background: rgba(232, 236, 0, 0.5);
+      -webkit-box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+              box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
+    }
+  }
   .sway {
     -webkit-animation-name: sway;
     -webkit-animation-iteration-count: infinite;

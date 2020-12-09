@@ -314,26 +314,26 @@ div.tree-lights ul li:nth-child(10){
   -webkit-animation-name: flash-two;
   animation-name: flash-one;
 }
-// @keyframes flash-one {
-//   0%, 100% {
-//     background: rgba(255, 0, 0, 1);
-//     box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 1);
-//   }
-//   50% {
-//     background: rgba(255, 0, 0, .5);
-//     box-shadow: 0 1px 20px 4px rgba(255, 0, 0, .7);
-//   }
-// }
-// @keyframes flash-two {
-//   50% {
-//     background: rgb(232, 236, 0);
-//     box-shadow: 0 1px 20px 4px rgba(232, 236, 0, .7);
-//   }
-//   0%, 100% {
-//     background: rgba(232, 236, 0, .5);
-//     box-shadow: 0 1px 20px 2px rgba(232, 236, 0, .3);
-//   }
-// }
+@keyframes flash-one {
+  0%, 100% {
+    background: rgba(255, 0, 0, 1);
+    box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 1);
+  }
+  50% {
+    background: rgba(255, 0, 0, .5);
+    box-shadow: 0 1px 20px 4px rgba(255, 0, 0, .7);
+  }
+}
+@keyframes flash-two {
+  50% {
+    background: rgb(232, 236, 0);
+    box-shadow: 0 1px 20px 4px rgba(232, 236, 0, .7);
+  }
+  0%, 100% {
+    background: rgba(232, 236, 0, .5);
+    box-shadow: 0 1px 20px 2px rgba(232, 236, 0, .3);
+  }
+}
 .sway {
   -webkit-animation-name: sway;
   -webkit-animation-iteration-count: infinite;
