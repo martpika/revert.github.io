@@ -378,7 +378,7 @@ div.tree a.mid-button {
   border: 1px solid rgb(99, 99, 99);
   background-color:rgb(155, 155, 155);
   box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, 0.5);
-  z-index: 5;
+  z-index: 6;
 }
 
 div.tree * {
@@ -829,20 +829,20 @@ div.tree-shadow * {
 .penguin * {
   position: absolute;
 }
-// @keyframes wave {
-//   10% {
-//     transform: rotate(110deg);
-//   }
-//   20% {
-//     transform: rotate(130deg);
-//   }
-//   30% {
-//     transform: rotate(110deg);
-//   }
-//   40% {
-//     transform: rotate(130deg);
-//   }
-// }
+@keyframes wave {
+  10% {
+    transform: rotate(110deg);
+  }
+  20% {
+    transform: rotate(130deg);
+  }
+  30% {
+    transform: rotate(110deg);
+  }
+  40% {
+    transform: rotate(130deg);
+  }
+}
 // ################### End of Penguin    #################
 
 
