@@ -265,6 +265,10 @@ svg {
   bottom: 0;
 }
 
+img {
+  opacity: 0;
+}
+
 @media screen and (max-width: 400px) {
   li, p {
     opacity: 1;
@@ -306,6 +310,7 @@ svg {
   }
   div.tree img.christmas-tree {
     position: absolute;
+    opacity: 1;
     width: 230px;
     top: 24px;
     left: 14px;
@@ -531,6 +536,7 @@ svg {
             transform: rotateX(180deg);
   }
   div.tree-shadow img.christmas-tree-shadow {
+    opacity: 1;
     position: absolute;
     width: 230px;
     top: 30px;

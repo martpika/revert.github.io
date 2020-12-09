@@ -179,7 +179,9 @@ svg {
   position: absolute;
   bottom: 0;
 }
-
+img {
+  opacity: 0;
+}
 // ################ Start of Mobile ################
 @media screen and(max-width: 400px) {
   li, p {
@@ -221,6 +223,7 @@ div.tree {
 }
 div.tree img.christmas-tree {
   position: absolute;
+  opacity: 1;
   width: 230px;
   top: 24px;
   left: 14px;
@@ -403,6 +406,7 @@ div.tree-shadow {
   transform: rotateX(180deg);
 }
 div.tree-shadow img.christmas-tree-shadow {
+  opacity: 1;
   position: absolute;
   width: 230px;
   top: 30px;
