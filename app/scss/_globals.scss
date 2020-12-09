@@ -179,7 +179,7 @@ svg {
   position: absolute;
   bottom: 0;
 }
-img {
+img, .merry-text {
   opacity: 0;
 }
 // ################ Start of Mobile ################
@@ -205,7 +205,16 @@ img {
     height: 180px;
     background:linear-gradient(to bottom, white, rgb(182, 196, 202));
   }
-
+  div.merry-text {
+    position: absolute;
+    opacity: 1;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.3rem;
+    color: #fff;
+    text-shadow: 2px 2px 7px rgb(252, 235, 0);
+    left: 25%;
+    top: 20%;
+  }
 
 // ########### Start of Tree #############
 div.tree-container {

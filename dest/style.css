@@ -265,7 +265,7 @@ svg {
   bottom: 0;
 }
 
-img {
+img, .merry-text {
   opacity: 0;
 }
 
@@ -292,6 +292,16 @@ img {
     height: 180px;
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(#b6c4ca));
     background: linear-gradient(to bottom, white, #b6c4ca);
+  }
+  div.merry-text {
+    position: absolute;
+    opacity: 1;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.3rem;
+    color: #fff;
+    text-shadow: 2px 2px 7px #fceb00;
+    left: 25%;
+    top: 20%;
   }
   div.tree-container {
     position: absolute;
