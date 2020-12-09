@@ -100,8 +100,8 @@ div.dialogue, p, li {
 
 .snowflake:nth-of-type(1) {
   left: 10%;
-  -webkit-animation-delay: 1s,1s;
-  animation-delay: 1s,1s;
+  -webkit-animation-delay: 1.7s,1s;
+  animation-delay: 1.7s,1s;
 }
 
 .snowflake:nth-of-type(2) {
@@ -118,8 +118,8 @@ div.dialogue, p, li {
 
 .snowflake:nth-of-type(4) {
   left: 40%;
-  -webkit-animation-delay: 2s,2s;
-  animation-delay: 2s,2s;
+  -webkit-animation-delay: 2.3s,2s;
+  animation-delay: 2.3s,2s;
 }
 
 .snowflake:nth-of-type(5) {
@@ -166,8 +166,8 @@ div.dialogue, p, li {
 
 .snowflake:nth-of-type(12) {
   left: 75%;
-  -webkit-animation-delay: 4s,2.5s;
-  animation-delay: 4s,2.5s;
+  -webkit-animation-delay: 4.5s,2.5s;
+  animation-delay: 4.5s,2.5s;
 }
 
 .snowflake:nth-of-type(13) {
@@ -192,30 +192,6 @@ div.dialogue, p, li {
   left: 26%;
   -webkit-animation-delay: 3, 2.5s;
   animation-delay: 3, 2.5s;
-}
-
-.snowflake:nth-of-type(17) {
-  left: 33%;
-  -webkit-animation-delay: 10s,2.5s;
-  animation-delay: 10s,2.5s;
-}
-
-.snowflake:nth-of-type(18) {
-  left: 73%;
-  -webkit-animation-delay: 11s,2.5s;
-  animation-delay: 11s,2.5s;
-}
-
-.snowflake:nth-of-type(19) {
-  left: 7%;
-  -webkit-animation-delay: 8s,2.5s;
-  animation-delay: 8s,2.5s;
-}
-
-.snowflake:nth-of-type(20) {
-  left: 83%;
-  -webkit-animation-delay: 9s,2.5s;
-  animation-delay: 9s,2.5s;
 }
 
 .col-1 {
@@ -326,6 +302,12 @@ svg {
     -webkit-transition: ease;
     transition: ease;
   }
+  div.tree img.christmas-tree {
+    position: absolute;
+    width: 230px;
+    top: 24px;
+    left: 14px;
+  }
   div.tree-lights {
     position: absolute;
     z-index: 3;
@@ -338,12 +320,12 @@ svg {
     border-radius: 100%;
     -webkit-transition: ease;
     transition: ease;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 1.3s;
     -webkit-animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear,ease-in-out;
     -webkit-animation-play-state: running,running;
-    animation-duration: 1s;
+    animation-duration: 1.3s;
     animation-fill-mode: both;
     -webkit-animation-timing-function: linear, ease-in-out;
             animation-timing-function: linear, ease-in-out;
@@ -360,132 +342,64 @@ svg {
     border-radius: 4px;
   }
   div.tree-lights ul li:nth-child(1) {
-    top: 128px;
-    left: 54px;
+    top: 82px;
+    left: 70px;
     -webkit-animation-name: flash-one;
     animation-name: flash-one;
   }
   div.tree-lights ul li:nth-child(2) {
-    top: 128px;
-    left: 158px;
+    top: 82px;
+    left: 183px;
     -webkit-animation-name: flash-two;
     animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(3) {
-    top: 150px;
-    left: 44px;
+    top: 114px;
+    left: 55px;
     -webkit-animation-name: flash-two;
     animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(4) {
-    top: 150px;
-    left: 168px;
+    top: 114px;
+    left: 197px;
     -webkit-animation-name: flash-one;
     animation-name: flash-one;
   }
   div.tree-lights ul li:nth-child(5) {
-    top: 176px;
-    left: 32px;
+    top: 140px;
+    left: 43px;
     -webkit-animation-name: flash-one;
     animation-name: flash-one;
   }
   div.tree-lights ul li:nth-child(6) {
-    top: 176px;
-    left: 182px;
+    top: 140px;
+    left: 210px;
     -webkit-animation-name: flash-two;
     animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(7) {
-    top: 200px;
-    left: 20px;
+    top: 167px;
+    left: 29px;
     -webkit-animation-name: flash-two;
     animation-name: flash-two;
   }
   div.tree-lights ul li:nth-child(8) {
-    top: 200px;
-    left: 194px;
+    top: 167px;
+    left: 224px;
     -webkit-animation-name: flash-one;
     animation-name: flash-one;
   }
-  @-webkit-keyframes flash-one {
-    0%, 100% {
-      background: red;
-      -webkit-box-shadow: 0 1px 20px 2px red;
-              box-shadow: 0 1px 20px 2px red;
-    }
-    50% {
-      background: rgba(255, 0, 0, 0.5);
-      -webkit-box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
-              box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
-    }
+  div.tree-lights ul li:nth-child(9) {
+    top: 195px;
+    left: 16px;
+    -webkit-animation-name: flash-one;
+    animation-name: flash-one;
   }
-  @keyframes flash-one {
-    0%, 100% {
-      background: red;
-      -webkit-box-shadow: 0 1px 20px 2px red;
-              box-shadow: 0 1px 20px 2px red;
-    }
-    50% {
-      background: rgba(255, 0, 0, 0.5);
-      -webkit-box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
-              box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 0.3);
-    }
-  }
-  @-webkit-keyframes flash-two {
-    50% {
-      background: #e8ec00;
-      -webkit-box-shadow: 0 1px 20px 2px #e8ec00;
-              box-shadow: 0 1px 20px 2px #e8ec00;
-    }
-    0%, 100% {
-      background: rgba(232, 236, 0, 0.5);
-      -webkit-box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
-              box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
-    }
-  }
-  @keyframes flash-two {
-    50% {
-      background: #e8ec00;
-      -webkit-box-shadow: 0 1px 20px 2px #e8ec00;
-              box-shadow: 0 1px 20px 2px #e8ec00;
-    }
-    0%, 100% {
-      background: rgba(232, 236, 0, 0.5);
-      -webkit-box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
-              box-shadow: 0 1px 20px 2px rgba(232, 236, 0, 0.3);
-    }
-  }
-  div.tree .leaves-top {
-    bottom: 40%;
-    left: 27%;
-    border-left: 55px solid transparent;
-    border-right: 55px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 55px solid var(--leaves-color);
-  }
-  div.tree .leaves-top-mid {
-    bottom: 31%;
-    left: 22%;
-    border-left: 65px solid transparent;
-    border-right: 65px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 60px solid var(--leaves-color);
-  }
-  div.tree .leaves-mid {
-    bottom: 20%;
-    left: 16%;
-    border-left: 78px solid transparent;
-    border-right: 78px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--leaves-color);
-  }
-  div.tree .leaves-bottom {
-    bottom: 10%;
-    left: 10%;
-    border-left: 90px solid transparent;
-    border-right: 90px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--leaves-color);
+  div.tree-lights ul li:nth-child(10) {
+    top: 195px;
+    left: 236px;
+    -webkit-animation-name: flash-two;
+    animation-name: flash-one;
   }
   .sway {
     -webkit-animation-name: sway;
@@ -495,50 +409,39 @@ svg {
     animation-iteration-count: infinite;
     animation-duration: 10s;
   }
-  @-webkit-keyframes sway {
-    0% {
-      -webkit-transform: skewY(0deg);
-              transform: skewY(0deg);
-    }
-    33% {
-      -webkit-transform: skewY(-2deg);
-              transform: skewY(-2deg);
-    }
-    66% {
-      -webkit-transform: skewY(2deg);
-              transform: skewY(2deg);
-    }
-  }
-  @keyframes sway {
-    0% {
-      -webkit-transform: skewY(0deg);
-              transform: skewY(0deg);
-    }
-    33% {
-      -webkit-transform: skewY(-2deg);
-              transform: skewY(-2deg);
-    }
-    66% {
-      -webkit-transform: skewY(2deg);
-              transform: skewY(2deg);
-    }
-  }
   div.tree-container .trunk {
     position: absolute;
     bottom: -239px;
-    left: 85px;
+    left: 104px;
     border-left: 23px solid transparent;
     border-right: 23px solid transparent;
     border-bottom: 80px solid #603913;
     z-index: 1;
   }
-  div.tree a.mid-radial {
-    top: 220px;
+  div.tree a.mid-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 11px;
+    height: 11px;
+    background-color: crimson;
+    border-radius: 100%;
+    border: 1px solid #970b27;
+  }
+  div.tree a.mid-button {
+    position: absolute;
+    top: 218px;
+    left: 117px;
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background-color: teal;
+    border: 1px solid #636363;
+    background-color: #9b9b9b;
+    -webkit-box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, 0.5);
     z-index: 5;
   }
   div.tree * {
@@ -546,7 +449,7 @@ svg {
   }
   div.tree-shadow-container {
     position: absolute;
-    left: 193px;
+    left: 211px;
     bottom: 443px;
     -webkit-transform: skewX(-40deg);
             transform: skewX(-40deg);
@@ -565,37 +468,10 @@ svg {
     -webkit-transform: rotateX(180deg);
             transform: rotateX(180deg);
   }
-  div.tree-shadow .leaves-top {
-    bottom: 40%;
-    left: 27%;
-    border-left: 55px solid transparent;
-    border-right: 55px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 55px solid var(--tree-shadow);
-  }
-  div.tree-shadow .leaves-top-mid {
-    bottom: 31%;
-    left: 22%;
-    border-left: 65px solid transparent;
-    border-right: 65px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 60px solid var(--tree-shadow);
-  }
-  div.tree-shadow .leaves-mid {
-    bottom: 20%;
-    left: 16%;
-    border-left: 78px solid transparent;
-    border-right: 78px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--tree-shadow);
-  }
-  div.tree-shadow .leaves-bottom {
-    bottom: 10%;
-    left: 10%;
-    border-left: 90px solid transparent;
-    border-right: 90px solid transparent;
-    border-top: 90px solid transparent;
-    border-bottom: 70px solid var(--tree-shadow);
+  div.tree-shadow img.christmas-tree-shadow {
+    position: absolute;
+    width: 230px;
+    top: 30px;
   }
   div.tree-shadow .trunk {
     bottom: 1px;
@@ -750,26 +626,6 @@ svg {
     animation-iteration-count: infinite;
     animation-duration: 10s;
   }
-  @-webkit-keyframes moon-glow {
-    0% {
-      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      -webkit-box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-    }
-  }
-  @keyframes moon-glow {
-    0% {
-      -webkit-box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 70px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-      -webkit-box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-              box-shadow: 0 0 90px 120px rgba(255, 255, 255, 0.3);
-    }
-  }
   div.moon ul li {
     position: absolute;
     list-style: none;
@@ -833,33 +689,9 @@ svg {
     -webkit-box-shadow: inset 2.4px -0.8px 0 0px #414043;
             box-shadow: inset 2.4px -0.8px 0 0px #414043;
   }
-  @-webkit-keyframes flicker {
-    50% {
-      -webkit-box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-              box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-    }
-  }
-  @keyframes flicker {
-    50% {
-      -webkit-box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-              box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.7);
-    }
-  }
-  @-webkit-keyframes moon-rotate {
-    50% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes moon-rotate {
-    50% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
   .penguin {
     position: absolute;
-    bottom: 150px;
+    bottom: 100px;
     left: 200px;
     width: var(--penguin-size, 200px);
     height: var(--penguin-size, 200px);
@@ -879,13 +711,14 @@ svg {
     position: absolute;
     height: 35px;
     width: 90px;
-    background-color: white;
+    background-color: #727272;
     border-radius: 10px;
     top: -30px;
     left: -10px;
     padding-left: 2px;
     padding-right: 2px;
     opacity: 0;
+    color: white;
     -webkit-transition: ease;
     transition: ease;
     -webkit-transform: rotate(0deg);
@@ -897,55 +730,13 @@ svg {
     animation-name: dia-change;
     animation-duration: 10s;
   }
-  @-webkit-keyframes dia-change {
-    10% {
-      -webkit-transform: rotate(-5deg);
-              transform: rotate(-5deg);
-    }
-    20% {
-      -webkit-transform: rotate(5deg);
-              transform: rotate(5deg);
-    }
-    30% {
-      -webkit-transform: rotate(-5deg);
-              transform: rotate(-5deg);
-    }
-    40% {
-      -webkit-transform: rotate(5deg);
-              transform: rotate(5deg);
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-  @keyframes dia-change {
-    10% {
-      -webkit-transform: rotate(-5deg);
-              transform: rotate(-5deg);
-    }
-    20% {
-      -webkit-transform: rotate(5deg);
-              transform: rotate(5deg);
-    }
-    30% {
-      -webkit-transform: rotate(-5deg);
-              transform: rotate(-5deg);
-    }
-    40% {
-      -webkit-transform: rotate(5deg);
-              transform: rotate(5deg);
-    }
-    50% {
-      opacity: 1;
-    }
-  }
   .dialogue::after {
     content: "";
     position: absolute;
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-top-color: white;
+    border-top-color: #727272;
     border-right: 0;
     border-bottom: 0;
     bottom: 0;
@@ -1108,45 +899,9 @@ svg {
   .penguin * {
     position: absolute;
   }
-  @-webkit-keyframes wave {
-    10% {
-      -webkit-transform: rotate(110deg);
-              transform: rotate(110deg);
-    }
-    20% {
-      -webkit-transform: rotate(130deg);
-              transform: rotate(130deg);
-    }
-    30% {
-      -webkit-transform: rotate(110deg);
-              transform: rotate(110deg);
-    }
-    40% {
-      -webkit-transform: rotate(130deg);
-              transform: rotate(130deg);
-    }
-  }
-  @keyframes wave {
-    10% {
-      -webkit-transform: rotate(110deg);
-              transform: rotate(110deg);
-    }
-    20% {
-      -webkit-transform: rotate(130deg);
-              transform: rotate(130deg);
-    }
-    30% {
-      -webkit-transform: rotate(110deg);
-              transform: rotate(110deg);
-    }
-    40% {
-      -webkit-transform: rotate(130deg);
-              transform: rotate(130deg);
-    }
-  }
   .penguin-shadow-container {
     position: absolute;
-    bottom: 263px;
+    bottom: 210px;
     left: 285px;
     -webkit-transform: skewX(-40deg);
             transform: skewX(-40deg);
@@ -1343,34 +1098,6 @@ svg {
   }
   div.mailbox * {
     position: absolute;
-  }
-  @-webkit-keyframes mail-wave {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    25% {
-      -webkit-transform: rotate(4deg);
-              transform: rotate(4deg);
-    }
-    50% {
-      -webkit-transform: rotate(-4deg);
-              transform: rotate(-4deg);
-    }
-  }
-  @keyframes mail-wave {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    25% {
-      -webkit-transform: rotate(4deg);
-              transform: rotate(4deg);
-    }
-    50% {
-      -webkit-transform: rotate(-4deg);
-              transform: rotate(-4deg);
-    }
   }
   div.mailbox-shadow-container1 {
     position: absolute;

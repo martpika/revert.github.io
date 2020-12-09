@@ -29,16 +29,13 @@ var check = "off";
 var ssound = new Audio();
 ssound.src = "app/js/Happy Christmas Background Music For Videos (128 kbps).mp3";
 
+
 function toggle_sound() {
   if (check === "off"){
     check = "on";
+    ssound.play();
   } else if (check === "on") {
     check = "off";
-  }
-  // If flag is ON, then play sound, else pause it
-  if (check === "on"){
-    ssound.play();
-  }else{
     ssound.pause();
   }
 }
